@@ -25,12 +25,12 @@ void print_student_detail(struct student_t student){
             switch ( student.gender ) {
             case GENDER_MALE:
                 ( student.dorm != NULL ) ?
-                    printf("male%s\n", student.dorm->name) : printf("male|unassigned\n");
+                    printf("male|%s\n", student.dorm->name) : printf("male|unassigned\n");
                 break;
             
             case GENDER_FEMALE:
                 ( student.dorm != NULL ) ?
-                    printf("female%s\n", student.dorm->name) : printf("female|unassigned\n");
+                    printf("female|%s\n", student.dorm->name) : printf("female|unassigned\n");
                 break;
         }
 
