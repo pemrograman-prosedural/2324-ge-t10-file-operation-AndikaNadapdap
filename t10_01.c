@@ -60,29 +60,43 @@ int main(int _argc, char **_argv)
 
     char perintah[60];
     while(1){
+        perintah[0]='\0';
         fgets(perintah, 60, stdin);
-        if (strcmp(perintah, "dorm-print-all-detail\n")==0){
+        fflush(stdin);
+        {
+            int len = strlen(perintah);
+            for (short a = 0; a< len; a++){
+                if(perintah[a]=='\r' || perintah[a]=='\n'){
+                    for(short b = a; b < len; b++){
+                        perintah[b] = perintah[b+1];
+                        len--;
+                        a--;
+                    }
+                }
+            }
+        }
+        if (strcmp(perintah, "dorm-print-all-detail")==0){
             for (int i = 0; i < total_dorms; i++)
             {
                 print_dorm_detail(dorms[i]);
             }
-        } else if (strcmp(perintah,"student-print-all-detail\n")==0){
+        } else if (strcmp(perintah,"student-print-all-detail")==0){
             for (int i = 0; i < total_students; i++)
             {
                 print_student_detail(students[i]);
             }
-        } else if (strcmp(perintah,"student-print-all\n")==0){
+        } else if (strcmp(perintah,"student-print-all")==0){
             for (int i = 0; i < total_students; i++)
             {
                 print_student(students[i]);
             }
 
-        } else if (strcmp(perintah,"dorm-print-all\n")==0){
+        } else if (strcmp(perintah,"dorm-print-all")==0){
             for (int i = 0; i < total_dorms; i++)
             {
                 print_dorm(dorms[i]);
             }
-        } else if (strcmp(perintah,"---\n")==0){
+        } else if (strcmp(perintah,"---")==0){
             break;
         }
         char *token = strtok(perintah, "#");
