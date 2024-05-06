@@ -16,7 +16,6 @@ int main(int _argc, char **_argv)
     char buffer[200];
     int total_dorms = 0;
     int total_students = 0;
-    int dorms_residence=0;
 
     file = fopen("./storage/dorm-repository.txt", "r");
     while (fgets(buffer, 200, file) != NULL)
