@@ -113,10 +113,8 @@ int main(int _argc, char **_argv)
             } else {
                 dorms[total_dorms]=create_dorm(name, capacity, GENDER_FEMALE);
                 total_dorms++;
-            }
-        
+            }    
+        }
     }
-
-
-    }
+    return 0;
 }
