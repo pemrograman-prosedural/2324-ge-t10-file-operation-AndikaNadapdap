@@ -21,7 +21,7 @@ struct student_t create_student(char *_id, char *_name, char *_year, enum gender
 }
 
 void print_student_detail(struct student_t student){
-    if (strcmp(student.name,"")==0){
+    if (strcmp(student.name,"")!=0){
     printf("%s|%s|%s|", student.id, student.name, student.year);
             switch ( student.gender ) {
             case GENDER_MALE:
