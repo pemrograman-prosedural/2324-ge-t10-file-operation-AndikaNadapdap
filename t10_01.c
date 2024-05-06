@@ -115,5 +115,7 @@ int main(int _argc, char **_argv)
             }    
         }
     }
+    free(dorms);
+    free(students);
     return 0;
 }
