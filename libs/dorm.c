@@ -27,7 +27,7 @@ void print_dorm_detail ( struct dorm_t dorm )
         printf("male|%d\n", dorm.residents_num);
     }
 
-    fflush(stdout);
+
     
 }
 
@@ -39,5 +39,5 @@ void print_dorm(struct dorm_t dorm){
         printf("male\n");
     }
 
-    fflush(stdout);
+
 }

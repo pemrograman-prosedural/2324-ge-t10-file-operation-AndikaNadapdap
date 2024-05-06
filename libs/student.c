@@ -34,7 +34,7 @@ void print_student_detail(struct student_t student){
                 break;
         }
 
-    fflush(stdout);
+
 
 }
 
@@ -46,5 +46,4 @@ void print_student(struct student_t student){
         printf("male\n");
     }
 
-    fflush(stdout);
 }
