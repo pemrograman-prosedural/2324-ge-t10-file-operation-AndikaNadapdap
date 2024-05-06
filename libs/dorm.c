@@ -10,7 +10,6 @@
 struct dorm_t create_dorm ( char *_name, unsigned short _capacity, enum gender_t _gender )
 {
     struct dorm_t dorm_;
-    dorm_.residents_num = 0;
     strcpy( dorm_.name, _name );
     dorm_.capacity = _capacity;
     dorm_.gender   = _gender;
@@ -20,6 +19,7 @@ struct dorm_t create_dorm ( char *_name, unsigned short _capacity, enum gender_t
 
 void print_dorm_detail ( struct dorm_t dorm )
 {
+    dorm.residents_num = 0;
     printf( "%s|%d|", dorm.name, dorm.capacity );
     if (dorm.gender==GENDER_FEMALE){
         printf("female|%d\n", dorm.residents_num);
