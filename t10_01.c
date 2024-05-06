@@ -58,7 +58,7 @@ int main(int _argc, char **_argv)
     fclose(file);
 
 
-    char perintah[70];
+    char perintah[50];
     while(1){
         fgets(perintah, 70, stdin);
         if (strcmp(perintah, "dorm-print-all-detail\n")==0){
