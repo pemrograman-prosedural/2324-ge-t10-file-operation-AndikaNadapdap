@@ -10,12 +10,13 @@
 
 int main(int _argc, char **_argv)
 {
-    struct dorm_t dorms[5];
-    struct student_t students[20];
-    FILE *file;
-    char buffer[200];
     int total_dorms = 0;
     int total_students = 0;
+    struct dorm_t *dorms = malloc(5 * sizeof(struct dorm_t)); 
+    struct student_t *students = malloc(20 * sizeof(struct student_t));
+    FILE *file;
+    char buffer[200];
+
 
     file = fopen("./storage/dorm-repository.txt", "r");
     while (fgets(buffer, 200, file) != NULL)
