@@ -12,7 +12,7 @@ int main(int _argc, char **_argv)
 {
     int total_dorms = 0;
     int total_students = 0;
-    struct dorm_t *dorms = malloc(5 * sizeof(struct dorm_t)); 
+    struct dorm_t *dorms = malloc(10 * sizeof(struct dorm_t)); 
     struct student_t *students = malloc(20 * sizeof(struct student_t));
     FILE *file;
     char buffer[200];
