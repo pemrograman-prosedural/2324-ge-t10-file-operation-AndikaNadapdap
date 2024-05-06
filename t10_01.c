@@ -21,6 +21,7 @@ int main(int _argc, char **_argv)
     file = fopen("./storage/dorm-repository.txt", "r");
     while (fgets(buffer, 200, file) != NULL)
     {
+        buffer[strcspn(buffer, "\r\n")] = 0;
         char *token = strtok(buffer, "|");
         char  *name = token;
         token = strtok(NULL, "|");
@@ -39,6 +40,7 @@ int main(int _argc, char **_argv)
     file = fopen("./storage/student-repository.txt", "r");
     while (fgets(buffer, 200, file) != NULL)
     {
+        buffer[strcspn(buffer, "\r\n")] = 0;
         char *token = strtok(buffer, "|");
         char  *id = token;
         token = strtok(NULL, "|");
