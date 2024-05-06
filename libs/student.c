@@ -15,6 +15,7 @@ struct student_t create_student(char *_id, char *_name, char *_year, enum gender
     strcpy(student.name, _name);
     strcpy(student.year, _year);
     student.gender= _gender;
+    student.dorm = NULL;
 
     return student;
 }
